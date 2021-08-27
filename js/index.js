@@ -1,4 +1,4 @@
-let counter = 0;
+let counter = JSON.parse(localStorage.getItem("counter"));
 let counterDOM = document.getElementById("counter")
 let increaseDOM = document.getElementById("increase")
 let decreaseDOM = document.getElementById("decrease")
@@ -11,6 +11,6 @@ decreaseDOM.addEventListener("click", counterEvent);
 function counterEvent(){
   console.log(this.id);
   this.id == "increase" ? counter+=1 : counter-=1;
-  
-  counterDOM.innerHTML= counter;
+  localStorage.setItem("counter", counter)
+  counterDOM.innerHTML= JSON.parse(localStorage.getItem("counter"));
 }
