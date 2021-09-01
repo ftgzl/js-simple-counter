@@ -1,2 +1,2 @@
 # js-simple-counter
-Simple counter
+Simple counter example
